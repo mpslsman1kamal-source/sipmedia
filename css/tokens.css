@@ -1,0 +1,224 @@
+/* ==========================================================
+   tokens.css — Sumber tunggal tampilan SIPMEDIA
+   Tiga lapis: Primitive → Semantic → Component
+   Nilai primitive diambil dari Stylesheet.html aplikasi lama (tampilan dipertahankan).
+   Mengganti warna utama cukup mengubah --color-primary di lapis Semantic.
+   Satu-satunya tempat warna mentah (#hex / rgba) adalah lapis Primitive di bawah.
+   ========================================================== */
+
+:root {
+  /* ---------- 1. PRIMITIVE ---------- */
+
+  /* Biru (merek) */
+  --blue-100: #DBEAFE;
+  --blue-300: #93C5FD;
+  --blue-400: #4C7DFB;
+  --blue-500: #2563EB;
+  --blue-600: #1D4ED8;
+  --blue-700: #004AC6;
+  --blue-sky: #4895EF;
+  --blue-dk-300: #6C93FF;
+  --blue-dk-200: #7EA0FF;
+  --blue-500-a10: rgba(37, 99, 235, 0.10);
+  --blue-400-a16: rgba(76, 125, 251, 0.16);
+
+  /* Netral terang */
+  --white: #FFFFFF;
+  --slate-50: #F7F9FB;
+  --slate-200: #E2E8F0;
+  --slate-400: #A8B4CC;
+  --slate-600: #434655;
+  --slate-700: #475569;
+  --slate-900: #0F172A;
+
+  /* Netral gelap */
+  --night-950: #070B14;
+  --night-900: #0B0F19;
+  --night-850: #0F1B33;
+  --night-800: #131A2A;
+  --night-700: #232C42;
+  --night-500: #7C88A3;
+  --night-300: #9AA5B8;
+  --night-100: #E7EAF0;
+
+  /* Status */
+  --green-500: #10B981;
+  --green-100: #D1FAE5;
+  --green-800: #065F46;
+  --red-500: #EF4444;
+  --red-300: #FCA5A5;
+  --red-100: #FFDAD6;
+  --red-900: #93000A;
+  --amber-600: #D97706;
+  --amber-500: #F59E0B;
+  --amber-100: #FEF3C7;
+  --amber-800: #92400E;
+
+  /* Peran */
+  --indigo-600: #4F46E5;
+  --indigo-600-a12: rgba(79, 70, 229, 0.12);
+  --navy-600: #1E3A5F;
+  --navy-600-a12: rgba(30, 58, 95, 0.12);
+  --violet-600: #7C3AED;
+
+  /* Transparan */
+  --white-a08: rgba(255, 255, 255, 0.08);
+  --white-a18: rgba(255, 255, 255, 0.18);
+  --white-a40: rgba(255, 255, 255, 0.40);
+  --white-a85: rgba(255, 255, 255, 0.85);
+  --black-a50: rgba(0, 0, 0, 0.50);
+  --shadow-light-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-light-lg: 0 8px 24px rgba(0, 0, 0, 0.10);
+  --shadow-dark-sm: 0 2px 10px rgba(0, 0, 0, 0.40);
+  --shadow-dark-lg: 0 10px 28px rgba(0, 0, 0, 0.50);
+
+  /* Skala jarak (dasar 4px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Tipografi */
+  --font-head: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-2xs: 0.68rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.85rem;
+  --text-base: 14px;
+  --text-md: 1.05rem;
+  --text-lg: 1.4rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.5rem;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --leading-normal: 1.5;
+
+  /* Bentuk */
+  --radius-sm: 6px;
+  --radius-control: 8px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-pill: 999px;
+  --size-touch: 44px;
+  --size-icon-btn: 38px;
+  --sidebar-width: 264px;
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+
+  /* ---------- 2. SEMANTIC (terang) ---------- */
+  --color-primary:        var(--blue-500);
+  --color-primary-strong: var(--blue-700);
+  --color-primary-hover:  var(--blue-600);
+  --color-primary-soft:   var(--blue-500-a10);
+  --color-on-primary:     var(--white);
+  --color-gradient-end:   var(--blue-sky);
+
+  --color-bg:             var(--slate-50);
+  --color-surface:        var(--white);
+  --color-surface-alt:    var(--slate-50);
+  --color-text:           var(--slate-900);
+  --color-text-muted:     var(--slate-600);
+  --color-border:         var(--slate-200);
+  --color-overlay:        var(--black-a50);
+
+  --color-success:        var(--green-500);
+  --color-danger:         var(--red-500);
+  --color-warning:        var(--amber-600);
+  --color-success-bg:     var(--green-100);
+  --color-success-fg:     var(--green-800);
+  --color-danger-bg:      var(--red-100);
+  --color-danger-fg:      var(--red-900);
+  --color-warning-bg:     var(--amber-100);
+  --color-warning-fg:     var(--amber-800);
+  --color-neutral-bg:     var(--slate-200);
+  --color-neutral-fg:     var(--slate-700);
+
+  --color-sidebar-bg:     var(--night-850);
+  --color-sidebar-text:   var(--slate-400);
+  --color-sidebar-active: var(--white);
+  --color-logout:         var(--red-300);
+
+  --color-role-admin-bg:  var(--indigo-600-a12);
+  --color-role-admin-fg:  var(--indigo-600);
+  --color-role-kepsek-bg: var(--navy-600-a12);
+  --color-role-kepsek-fg: var(--navy-600);
+  --color-role-guru-bg:   var(--blue-100);
+  --color-role-guru-fg:   var(--blue-600);
+  --color-role-osis-bg:   var(--amber-100);
+  --color-role-osis-fg:   var(--amber-800);
+
+  --chart-1: var(--blue-500);
+  --chart-2: var(--blue-300);
+  --chart-3: var(--violet-600);
+  --chart-4: var(--amber-500);
+  --chart-5: var(--green-500);
+  --chart-fill: var(--blue-500-a10);
+  --chart-text: var(--slate-600);
+  --chart-grid: var(--slate-200);
+
+  --shadow-sm: var(--shadow-light-sm);
+  --shadow-lg: var(--shadow-light-lg);
+
+  /* ---------- 3. COMPONENT ---------- */
+  --button-bg:         var(--color-primary);
+  --button-bg-hover:   var(--color-primary-hover);
+  --button-fg:         var(--color-on-primary);
+  --button-radius:     var(--radius-control);
+
+  --card-bg:           var(--color-surface);
+  --card-border:       var(--color-border);
+  --card-radius:       var(--radius-card);
+  --card-shadow:       var(--shadow-sm);
+  --card-padding:      var(--space-6);
+
+  --input-bg:          var(--color-surface);
+  --input-border:      var(--color-border);
+  --input-border-focus: var(--color-primary);
+  --input-ring:        var(--color-primary-soft);
+  --input-radius:      var(--radius-control);
+
+  --table-head-bg:     var(--color-bg);
+  --table-row-hover:   var(--color-primary-soft);
+
+  --nav-active-bg:     var(--color-primary);
+  --nav-hover-bg:      var(--white-a08);
+
+  --toast-bg:          var(--color-surface);
+  --toast-fg:          var(--color-text);
+
+  --calendar-line:     var(--color-border);
+}
+
+/* ---------- Semantic gelap ----------
+   Hanya lapis Semantic yang berubah dan HANYA merujuk primitive (tanpa hex di sini). */
+[data-theme="dark"] {
+  --color-primary:        var(--blue-400);
+  --color-primary-strong: var(--blue-dk-300);
+  --color-primary-hover:  var(--blue-dk-200);
+  --color-primary-soft:   var(--blue-400-a16);
+
+  --color-bg:             var(--night-900);
+  --color-surface:        var(--night-800);
+  --color-surface-alt:    var(--night-900);
+  --color-text:           var(--night-100);
+  --color-text-muted:     var(--night-300);
+  --color-border:         var(--night-700);
+
+  --color-sidebar-bg:     var(--night-950);
+  --color-sidebar-text:   var(--night-500);
+  --color-sidebar-active: var(--night-100);
+
+  --chart-text: var(--night-300);
+  --chart-grid: var(--night-700);
+  --chart-fill: var(--blue-400-a16);
+
+  --shadow-sm: var(--shadow-dark-sm);
+  --shadow-lg: var(--shadow-dark-lg);
+}
